@@ -1,6 +1,7 @@
+import { Page } from '@/typings/page';
 import Head from 'next/head';
 
-export const Home: React.FC = () => {
+export const Home: Page = () => {
   return (
     <div>
       <Head>
