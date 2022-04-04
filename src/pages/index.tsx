@@ -10,7 +10,7 @@ export const Home: Page = () => {
           name="description"
           content="TypeScript starter for Next.js that includes all you need to build amazing apps"
         />
-        <link rel="icon" href="/mitg-icon.svg" />
+        <link rel="icon" href="/logo/mitg-icon.svg" />
       </Head>
       Template Kamity
     </div>

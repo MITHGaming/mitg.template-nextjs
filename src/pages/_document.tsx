@@ -11,6 +11,7 @@ export default class Document extends NextDocument {
             id="stitches"
             dangerouslySetInnerHTML={{ __html: getCssText() }}
           />
+          <link rel="manifest" href="manifest.json"></link>
         </Head>
         <body>
           <Main />
