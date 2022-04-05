@@ -1,4 +1,4 @@
-name: Check PR
+name: MISIOR | Check PR
 
 on: [pull_request]
 
