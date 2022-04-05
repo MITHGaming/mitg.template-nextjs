@@ -12,7 +12,7 @@ export const Home: Page = () => {
         />
         <link rel="icon" href="/logo/mitg-icon.svg" />
       </Head>
-      Template Kamity
+      <div>Home Pagina</div>
     </div>
   );
 };
