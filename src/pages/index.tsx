@@ -23,7 +23,7 @@ export const Home: Page = () => {
         />
         <link rel="icon" href="/logo/mitg-icon.svg" />
       </Head>
-      <button onClick={handleClickLanguage}>{t(`template`)}</button>
+      <button onClick={handleClickLanguage}>{t(`home/template`)}</button>
     </div>
   );
 };

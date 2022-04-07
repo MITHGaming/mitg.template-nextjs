@@ -1,4 +1,4 @@
-type LangStringProps = {
+export type LangStringProps = {
   [key: string]: LangOptionsProps;
 };
 
@@ -8,9 +8,9 @@ type LangOptionsProps = {
 
 export const LangStrings: LangStringProps = {
   enUs: {
-    template: `Home Page`,
+    'home/template': `Home Page`,
   },
   ptBr: {
-    template: `Pagina Inicial`,
+    'home/template': `Pagina Inicial`,
   },
 };

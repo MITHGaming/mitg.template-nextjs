@@ -1,4 +1,3 @@
-import { LangStrings } from '@/content/language';
 import {
   defaultLocale,
   LanguageContext,
@@ -7,14 +6,14 @@ import {
 import { useContext } from 'react';
 
 export const useTranslation = () => {
-  const { locale, setLocale } = useContext(LanguageContext);
+  const { locale, setLocale, langs } = useContext(LanguageContext);
 
   const t = (key: string) => {
-    if (!LangStrings[locale][key]) {
+    if (!langs[locale][key]) {
       console.warn(`Translation key "${key}" not found for locale "${locale}"`);
     }
 
-    return LangStrings[locale][key] || LangStrings[defaultLocale][key] || ``;
+    return langs[locale][key] || langs[defaultLocale][key] || ``;
   };
 
   const changeLanguage = (language: string) => {
