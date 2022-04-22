@@ -1,6 +1,8 @@
 import useTranslation from '@/hooks/useTranslation';
 import { Page } from '@/typings/page';
+import axios from 'axios';
 import Head from 'next/head';
+import { useEffect } from 'react';
 
 export const Home: Page = () => {
   const { t, changeLanguage, locale } = useTranslation();
@@ -12,6 +14,29 @@ export const Home: Page = () => {
       changeLanguage(`ptBr`);
     }
   };
+
+  useEffect(() => {
+    const testDomain = async () => {
+      window?.xdomain({
+        'http://t54542.vtexcommercestable.com.br': `/bn-api`,
+        'https://t54542.vtexcommercestable.com.br': `/bn-api`,
+        'http://t54542.myvtex.com': `/bn-api`,
+        'https://t54542.myvtex.com': `/bn-api`,
+        'http://belezanatural.com.br': `/bn-api`,
+        'https://belezanatural.com.br': `/bn-api`,
+        'http://www.belezanatural.com.br': `/bn-api`,
+        'https://www.belezanatural.com.br': `/bn-api`,
+      });
+
+      const data = await axios.get(
+        `https://www.belezanatural.com.br/api/sessions?items=*`,
+      );
+
+      console.log(data);
+    };
+
+    testDomain();
+  }, []);
 
   return (
     <div>
