@@ -7,9 +7,3 @@ export type Page<P = {}> = NextPage<P> & {
   getLayout?: (page: ReactElement) => ReactNode;
   layout?: ComponentType;
 };
-
-declare global {
-  interface Window {
-    xdomain: any;
-  }
-}
